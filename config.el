@@ -55,3 +55,5 @@
 ;; they are implemented.
 
 (global-flycheck-mode -1)
+
+(load! "modules/xml")
