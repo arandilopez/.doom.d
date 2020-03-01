@@ -51,3 +51,4 @@
 ;(package! builtin-package :recipe (:branch "develop"))
 
 (package! haml-mode)
+(package! wakatime-mode)

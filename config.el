@@ -55,5 +55,5 @@
 ;; they are implemented.
 
 (global-flycheck-mode -1)
-
+(global-wakatime-mode)
 (load! "modules/xml")
