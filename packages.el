@@ -52,3 +52,4 @@
 
 (package! haml-mode)
 (package! wakatime-mode)
+(package! atom-one-dark-theme)
