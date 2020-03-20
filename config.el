@@ -35,7 +35,7 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
-(setq projectile-project-search-path '("~/Code" "~/Code/osom"))
+(setq projectile-project-search-path '("~/Code" "~/Code/osom" "~/Code/arandilopez"))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -57,3 +57,9 @@
 ;; (global-flycheck-mode -1)
 (global-wakatime-mode)
 (load! "modules/xml")
+
+;; Evil mode to recognize underscore as word char
+(modify-syntax-entry ?_ "w")
+
+(after! highlight-indent-guides
+  (highlight-indent-guides-auto-set-faces))
