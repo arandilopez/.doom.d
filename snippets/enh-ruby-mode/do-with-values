@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: do-with-values
+# uuid:
+# key: dov
+# condition: t
+# --
+do $1{|$2{param}|}
+  $3{}
+end
