@@ -4,6 +4,6 @@
 # key: dov
 # condition: t
 # --
-do $1{|$2{param}|}
-  $3{}
+do ${|${1:param}|}
+  ${}
 end
