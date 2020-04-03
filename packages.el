@@ -50,6 +50,7 @@
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
 
-(package! haml-mode)
-(package! wakatime-mode)
 (package! atom-one-dark-theme)
+(package! haml-mode)
+(package! vue-mode)
+(package! wakatime-mode)
