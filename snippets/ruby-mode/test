@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: test
+# uuid: test
+# key: test
+# condition: t
+# --
+test '${1:do something}' do
+  ${2:# code here...}
+end
