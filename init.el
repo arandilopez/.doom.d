@@ -31,7 +31,7 @@
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
        ;; fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
-       ;;hydra
+       hydra
        indent-guides     ; highlighted indent columns
        modeline          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink the current line after jumping
@@ -62,7 +62,7 @@
        ;;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
-       ;;word-wrap         ; soft wrapping with language-aware indent
+       word-wrap         ; soft wrapping with language-aware indent
 
        :emacs
        dired             ; making dired pretty [functional]
@@ -111,7 +111,7 @@
        ;;clojure           ; java with a lisp
        ;; common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
-       crystal           ; ruby at the speed of c
+       ;; crystal           ; ruby at the speed of c
        ;;csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
        elixir            ; erlang done right
@@ -126,9 +126,7 @@
        ;;(haskell +dante)  ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
-       (java
-        +meghanada
-        +lsp)              ; the poster child for carpal tunnel syndrome
+       (java +lsp)         ; the poster child for carpal tunnel syndrome
        (javascript +lsp)   ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
@@ -145,7 +143,7 @@
         +dragndrop         ; drag & drop files/images into org buffers
         ;;+hugo            ; use Emacs for hugo blogging
         ;;+jupyter         ; ipython/jupyter support for babel
-        ;;+pandoc          ; export-with-pandoc support
+        +pandoc          ; export-with-pandoc support
         ;;+pomodoro        ; be fruitful with the tomato technique
         +present)          ; using org-mode for presentations
        ;;perl              ; write code no one else can comprehend
