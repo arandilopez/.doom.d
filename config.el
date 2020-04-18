@@ -37,6 +37,8 @@
 
 (setq projectile-project-search-path '("~/Code" "~/Code/osom" "~/Code/arandilopez"))
 
+(setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
