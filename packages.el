@@ -54,3 +54,4 @@
 (package! haml-mode)
 (package! vue-mode)
 (package! wakatime-mode)
+(package! pomidor)

@@ -37,8 +37,6 @@
 
 (setq projectile-project-search-path '("~/Code" "~/Code/osom" "~/Code/arandilopez"))
 
-(setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")
-
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -56,8 +54,26 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-(global-wakatime-mode)
 (load! "modules/xml")
 
 (after! highlight-indent-guides
   (highlight-indent-guides-auto-set-faces))
+
+;; Pomidor settings
+(global-set-key (kbd "<f12>") #'pomidor)
+(setq pomidor-seconds (* 25 60)) ; 25 minutes for the work period
+(setq pomidor-break-seconds (* 5 60)) ; 5 minutes break time
+(setq alert-default-style 'libnotify)
+(setq pomidor-sound-tick nil
+      pomidor-sound-tack nil)
+
+;; LSP mode settings
+(setq lsp-enable-snippet t)
+(setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")
+
+;; Keymaps
+(map! :leader
+      "f t" #'find-in-dotfiles)
+
+;; Enable Wakatime
+(global-wakatime-mode)
