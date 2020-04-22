@@ -20,9 +20,9 @@
 
        :completion
        company           ; the ultimate code completion backend
-       ;; (helm +fuzzy)              ; the *other* search engine for love and life
+       (helm +fuzzy)              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
-       (ivy +fuzzy +prescient)               ; a search engine for love and life
+       ;; (ivy +fuzzy +prescient)               ; a search engine for love and life
 
        :ui
        ;;deft              ; notational velocity for Emacs
@@ -115,7 +115,7 @@
        ;;csharp            ; unity, .NET, and mono shenanigans
        data              ; config/data formats
        (dart +lsp +flutter) ; nice apps backed by Google
-       elixir            ; erlang done right
+       (elixir +lsp)       ; erlang done right
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
        erlang            ; an elegant language for a more civilized age
