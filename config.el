@@ -73,7 +73,7 @@
 
 ;; Keymaps
 (map! :leader
-      "f t" #'find-in-dotfiles)
+      :desc "Find file in dotfiles" "f t" #'find-in-dotfiles)
 
 ;; Enable Wakatime
 (global-wakatime-mode)
