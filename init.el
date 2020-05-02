@@ -72,13 +72,13 @@
 
        :term
        ;; eshell            ; a consistent, cross-platform shell (WIP)
-       ;;shell             ; a terminal REPL for Emacs
+       ;; shell             ; a terminal REPL for Emacs
        ;; term              ; terminals in Emacs
-       vterm             ; another terminals in Emacs
+       ;; vterm             ; another terminals in Emacs
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       (spell +everywhere) ; tasing you for misspelling mispelling
+       spell               ; tasing you for misspelling mispelling
        ;;grammar           ; tasing grammar mistake every you make
 
        :tools
@@ -95,7 +95,7 @@
        lsp
        ;; macos             ; MacOS-specific commands
        magit             ; a git porcelain for Emacs
-       ;;make              ; run make tasks from Emacs
+       make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
        pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
@@ -113,12 +113,12 @@
        ;;coq               ; proofs-as-programs
        ;; crystal           ; ruby at the speed of c
        ;;csharp            ; unity, .NET, and mono shenanigans
-       data              ; config/data formats
-       (dart +lsp +flutter) ; nice apps backed by Google
+       data                ; config/data formats
+       ;; (dart +lsp +flutter) ; nice apps backed by Google
        (elixir +lsp)       ; erlang done right
        ;;elm               ; care for a cup of TEA?
        emacs-lisp        ; drown in parentheses
-       erlang            ; an elegant language for a more civilized age
+       ;; erlang            ; an elegant language for a more civilized age
        ;;ess               ; emacs speaks statistics
        ;;faust             ; dsp, but you get to keep your soul
        ;;fsharp           ; ML stands for Microsoft's Language
@@ -127,14 +127,14 @@
        ;;(haskell +dante)  ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
-       (java +lsp)         ; the poster child for carpal tunnel syndrome
+       ;; (java +lsp)         ; the poster child for carpal tunnel syndrome
        (javascript +lsp)   ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
-       (kotlin +lsp)            ; a better, slicker Java(Script)
-       latex               ; writing papers in Emacs has never been so fun
+       ;; (kotlin +lsp)            ; a better, slicker Java(Script)
+       ;; latex               ; writing papers in Emacs has never been so fun
        ;;lean
        ;;factor
-       ledger            ; an accounting system in Emacs
+       ;; ledger            ; an accounting system in Emacs
        ;;lua               ; one-based indices? one-based indices
        markdown            ; writing docs for people to ignore
        ;;nim               ; python + lisp at the speed of c
@@ -162,7 +162,7 @@
        ;;scheme            ; a fully conniving family of lisps
        sh                  ; she sells {ba,z,fi}sh shells on the C xor
        ;;solidity          ; do you need a blockchain? No.
-       (swift +lsp)             ; who asked for emoji variables?
+       ;; (swift +lsp)             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
        web                 ; the tubes
 

@@ -68,8 +68,8 @@
       pomidor-sound-tack nil)
 
 ;; LSP mode settings
-(setq lsp-enable-snippet t)
-(setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")
+;; (setq lsp-enable-snippet t)
+;; (setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")
 
 ;; Keymaps
 (map! :leader
