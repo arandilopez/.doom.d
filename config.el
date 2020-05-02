@@ -76,4 +76,5 @@
       :desc "Find file in dotfiles" "f t" #'find-in-dotfiles)
 
 ;; Enable Wakatime
+(setq wakatime-cli-path "$(which wakatime)")
 (global-wakatime-mode)
