@@ -56,6 +56,11 @@
 
 (load! "modules/xml")
 
+;; Company settings suggested by lsp-mode
+(setq company-minimum-prefix-length 1
+      company-idle-delay 0.0) ;; default is 0.2
+
+;; Don't remember, but this fixes identations guides when using emacsclient
 (after! highlight-indent-guides
   (highlight-indent-guides-auto-set-faces))
 
@@ -78,3 +83,8 @@
 ;; Enable Wakatime
 (setq wakatime-cli-path "$(which wakatime)")
 (global-wakatime-mode)
+
+;; Minitest emacs
+(setq minitest-use-rails t)
+(eval-after-load 'minitest
+  '(minitest-install-snippets))
