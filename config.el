@@ -88,3 +88,13 @@
 (setq minitest-use-rails t)
 (eval-after-load 'minitest
   '(minitest-install-snippets))
+
+;; OS X Mapping
+(map! (:when IS-MAC
+       :g "M-1" "|"
+       :g "M-2" "@"
+       :g "M-3" "#"
+       :g "M-º" "\\"
+       :g "M-ç" "}"
+       :g "M-+" "]"
+       :g "M-ñ" "~"))
