@@ -72,10 +72,6 @@
 (setq pomidor-sound-tick nil
       pomidor-sound-tack nil)
 
-;; LSP mode settings
-;; (setq lsp-enable-snippet t)
-;; (setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")
-
 ;; Keymaps
 (map! :leader
       :desc "Find file in dotfiles" "f t" #'find-in-dotfiles)
@@ -83,11 +79,6 @@
 ;; Enable Wakatime
 (setq wakatime-cli-path "$(which wakatime)")
 (global-wakatime-mode)
-
-;; Minitest emacs
-(setq minitest-use-rails t)
-(eval-after-load 'minitest
-  '(minitest-install-snippets))
 
 ;; OS X Mapping
 (map! (:when IS-MAC
@@ -98,3 +89,23 @@
        :g "M-ç" "}"
        :g "M-+" "]"
        :g "M-ñ" "~"))
+
+;; Vue mode settings
+(setq lsp-log-io t)
+(use-package vue-mode
+  :mode "\\.vue\\'"
+  :config
+  ;; Enable lsp on vue files
+  ;; It doesn't seem to work
+  (add-hook! 'vue-mode-hook #'lsp!)
+  ;; Fix identation problems
+  (add-hook! 'vue-mode-hook (lambda () (setq syntax-ppss-table nil)))
+  (setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
+  ;; 0, 1, or 2, representing (respectively) none, low, and high coloring
+  (setq mmm-submode-decoration-level 0))
+
+(with-eval-after-load 'lsp-mode
+  (mapc #'lsp-flycheck-add-mode '(typescript-mode js-mode css-mode vue-html-mode)))
+;; LSP mode settings
+;; (setq lsp-enable-snippet t)
+;; (setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")

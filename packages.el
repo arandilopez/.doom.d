@@ -52,6 +52,7 @@
 
 (package! atom-one-dark-theme)
 (package! haml-mode)
-(package! vue-mode)
 (package! wakatime-mode)
 (package! pomidor)
+
+(package! vue-mode)
