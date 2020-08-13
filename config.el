@@ -56,11 +56,7 @@
 
 (load! "modules/xml")
 
-;; Company settings suggested by lsp-mode
-(setq company-minimum-prefix-length 1
-      company-idle-delay 0.0) ;; default is 0.2
-
-;; Don't remember, but this fixes identations guides when using emacsclient
+;; I don't remember where I readed it but this fixes identations guides when using emacsclient
 (after! highlight-indent-guides
   (highlight-indent-guides-auto-set-faces))
 
@@ -72,16 +68,16 @@
 (setq pomidor-sound-tick nil
       pomidor-sound-tack nil)
 
-;; Keymaps
-(map! :leader
-      :desc "Find file in dotfiles" "f t" #'find-in-dotfiles)
-
 ;; Enable Wakatime
 (setq wakatime-cli-path "$(which wakatime)")
 (global-wakatime-mode)
 
+;; Keymaps
+(map! :leader
+      :desc "Find file in dotfiles" "f t" #'find-in-dotfiles)
+
 ;; OS X Mapping
-(map! (:when IS-MAC
+(map! (:when IS-MAC ;; My mac XD
        :g "M-1" "|"
        :g "M-2" "@"
        :g "M-3" "#"
@@ -90,22 +86,28 @@
        :g "M-+" "]"
        :g "M-ñ" "~"))
 
-;; Vue mode settings
+;; LSP mode settings
+(setq lsp-auto-configure t)
 (setq lsp-log-io t)
+(setq lsp-enable-snippet t)
+
+;; Company settings suggested by lsp-mode
+(setq company-minimum-prefix-length 1
+      company-idle-delay 0.0) ;; default is 0.2
+
+;; Vue mode settings + LSP
 (use-package vue-mode
   :mode "\\.vue\\'"
   :config
-  ;; Enable lsp on vue files
-  ;; It doesn't seem to work
-  (add-hook! 'vue-mode-hook #'lsp!)
+  ;; Enable lsp on vue files,
+  ;; but it doesn't seem to work;
+  ;; at least with coffeescript in vue files
+  (add-hook! 'vue-mode-hook #'lsp)
   ;; Fix identation problems
   (add-hook! 'vue-mode-hook (lambda () (setq syntax-ppss-table nil)))
   (setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
   ;; 0, 1, or 2, representing (respectively) none, low, and high coloring
   (setq mmm-submode-decoration-level 0))
 
-(with-eval-after-load 'lsp-mode
-  (mapc #'lsp-flycheck-add-mode '(typescript-mode js-mode css-mode vue-html-mode)))
-;; LSP mode settings
-;; (setq lsp-enable-snippet t)
+;; LSP dart settings
 ;; (setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")

@@ -51,8 +51,7 @@
 ;(package! builtin-package :recipe (:branch "develop"))
 
 (package! atom-one-dark-theme)
-(package! haml-mode)
 (package! wakatime-mode)
 (package! pomidor)
-
+(package! haml-mode)
 (package! vue-mode)
