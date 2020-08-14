@@ -88,8 +88,12 @@
 
 ;; LSP mode settings
 (setq lsp-auto-configure t)
-(setq lsp-log-io t)
 (setq lsp-enable-snippet t)
+(setq lsp-log-io nil)
+(setq lsp-enable-folding nil)
+(setq lsp-enable-links nil)
+(setq lsp-restart 'auto-restart)
+;; (setq lsp-client-packages '(lsp-clients))
 
 ;; Company settings suggested by lsp-mode
 (setq company-minimum-prefix-length 1
