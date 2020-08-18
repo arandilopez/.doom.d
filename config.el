@@ -106,7 +106,7 @@
   ;; Enable lsp on vue files,
   ;; but it doesn't seem to work;
   ;; at least with coffeescript in vue files
-  (add-hook! 'vue-mode-hook #'lsp)
+  (add-hook! 'vue-mode-hook #'lsp!)
   ;; Fix identation problems
   (add-hook! 'vue-mode-hook (lambda () (setq syntax-ppss-table nil)))
   (setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
