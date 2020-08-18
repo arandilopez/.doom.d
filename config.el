@@ -25,7 +25,8 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'atom-one-dark)
+;; (setq doom-theme 'atom-one-dark)
+(setq doom-theme 'doom-dracula)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -92,8 +93,8 @@
 (setq lsp-log-io nil)
 (setq lsp-enable-folding nil)
 (setq lsp-enable-links nil)
+(setq lsp-enable-symbol-highlighting nil)
 (setq lsp-restart 'auto-restart)
-;; (setq lsp-client-packages '(lsp-clients))
 
 ;; Company settings suggested by lsp-mode
 (setq company-minimum-prefix-length 1
