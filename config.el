@@ -30,7 +30,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/Code/org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -63,14 +63,6 @@
 ;; I don't remember where I readed it but this fixes identations guides when using emacsclient
 (after! highlight-indent-guides
   (highlight-indent-guides-auto-set-faces))
-
-;; Pomidor settings
-(global-set-key (kbd "<f12>") #'pomidor)
-(setq pomidor-seconds (* 25 60)) ; 25 minutes for the work period
-(setq pomidor-break-seconds (* 5 60)) ; 5 minutes break time
-(setq alert-default-style 'libnotify)
-(setq pomidor-sound-tick nil
-      pomidor-sound-tack nil)
 
 ;; Enable Wakatime
 (setq wakatime-cli-path "$(which wakatime)")
