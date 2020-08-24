@@ -4,4 +4,5 @@
 # key: frozen
 # condition: t
 # --
-# ${1:frozen_string_literal: true}
+
+${1:# frozen_string_literal: true}
