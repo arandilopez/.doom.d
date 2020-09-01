@@ -95,19 +95,14 @@
 (setq company-minimum-prefix-length 1
       company-idle-delay 0.0) ;; default is 0.2
 
-;; Vue mode settings + LSP
-(use-package vue-mode
-  :mode "\\.vue\\'"
-  :config
-  ;; Enable lsp on vue files,
-  ;; but it doesn't seem to work;
-  ;; at least with coffeescript in vue files
-  (add-hook! 'vue-mode-hook #'lsp!)
-  ;; Fix identation problems
-  (add-hook! 'vue-mode-hook (lambda () (setq syntax-ppss-table nil)))
-  (setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
-  ;; 0, 1, or 2, representing (respectively) none, low, and high coloring
-  (setq mmm-submode-decoration-level 0))
+;; Enable lsp-mode on vue files,
+(add-hook! 'vue-mode-hook #'lsp!)
+;; Vue mode settings
+(add-hook! 'vue-mode-hook (lambda () (setq syntax-ppss-table nil)))
+(setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
+(setq mmm-typescript-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
+;; 0, 1, or 2, representing (respectively) none, low, and high coloring
+(setq mmm-submode-decoration-level 0)
 
 ;; LSP dart settings
 ;; (setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")
