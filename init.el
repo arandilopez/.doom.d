@@ -178,7 +178,7 @@
        ;;twitter           ; twitter client https://twitter.com/vnought
 
        :os
-       macos             ; MacOS-specific commands
+       (:if IS-MAC macos)  ; improve compatibility with macOS
 
        :config
        ;;literate
