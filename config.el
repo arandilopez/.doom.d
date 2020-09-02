@@ -95,14 +95,42 @@
 (setq company-minimum-prefix-length 1
       company-idle-delay 0.0) ;; default is 0.2
 
-;; Enable lsp-mode on vue files,
-(add-hook! 'vue-mode-hook #'lsp!)
 ;; Vue mode settings
+;; Override vue modes for mmm-modes
+(setq vue-modes
+  '((:type template :name nil :mode vue-html-mode)
+    (:type template :name html :mode vue-html-mode)
+    (:type template :name jade :mode jade-mode)
+    (:type template :name pug :mode pug-mode)
+    (:type template :name slm :mode slim-mode)
+    (:type template :name slim :mode slim-mode)
+    (:type script :name nil :mode typescript-mode)
+    (:type script :name js :mode typescript-mode)
+    (:type script :name es6 :mode typescript-mode)
+    (:type script :name babel :mode typescript-mode)
+    (:type script :name coffee :mode coffee-mode)
+    (:type script :name ts :mode typescript-mode)
+    (:type script :name typescript :mode typescript-mode)
+    (:type script :name tsx :mode typescript-tsx-mode)
+    (:type style :name nil :mode css-mode)
+    (:type style :name css :mode css-mode)
+    (:type style :name stylus :mode stylus-mode)
+    (:type style :name less :mode less-css-mode)
+    (:type style :name postcss :mode css-mode)
+    (:type style :name scss :mode css-mode)
+    (:type style :name sass :mode ssass-mode)
+    (:type i18n :name nil :mode json-mode)
+    (:type i18n :name json :mode json-mode)
+    (:type i18n :name yaml :mode yaml-mode)))
+
 (add-hook! 'vue-mode-hook (lambda () (setq syntax-ppss-table nil)))
 (setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
 (setq mmm-typescript-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
 ;; 0, 1, or 2, representing (respectively) none, low, and high coloring
 (setq mmm-submode-decoration-level 0)
+
+;; Enable lsp-mode on vue files,
+(add-hook! 'vue-mode-hook #'lsp!)
 
 ;; LSP dart settings
 ;; (setq lsp-dart-sdk-dir "~/flutter/bin/cache/dart-sdk")
