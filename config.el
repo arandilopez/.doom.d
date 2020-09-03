@@ -32,6 +32,9 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Code/org/")
 
+;; Setup org-agenda files
+(setq org-agenda-files "~/Code/org")
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
