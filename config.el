@@ -63,6 +63,9 @@
 ;; Disable menu bar
 (menu-bar-mode -1)
 
+;; Magit
+(setq git-commit-summary-max-length 80)
+
 ;; I don't remember where I readed it but this fixes identations guides when using emacsclient
 (after! highlight-indent-guides
   (highlight-indent-guides-auto-set-faces))
