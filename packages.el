@@ -54,3 +54,4 @@
 (package! wakatime-mode)
 (package! haml-mode)
 (package! vue-mode)
+(package! org-bullets)

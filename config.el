@@ -33,7 +33,10 @@
 (setq org-directory "~/Code/org/")
 
 ;; Setup org-agenda files
-(setq org-agenda-files "~/Code/org")
+(setq org-agenda-files '("~/Code/org"))
+
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
