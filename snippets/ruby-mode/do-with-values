@@ -1,8 +1,6 @@
 # -*- mode: snippet -*-
 # name: do-with-values
-# uuid:
 # key: dov
-# condition: t
 # --
 do |${param}|
   ${}
