@@ -61,8 +61,6 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-(load! "modules/xml")
-
 ;; Disable menu bar
 (menu-bar-mode -1)
 
@@ -82,7 +80,7 @@
       :desc "Find file in dotfiles" "f t" #'find-in-dotfiles)
 
 ;; OS X Mapping
-(map! (:when IS-MAC ;; My mac XD
+(map! (:when IS-MAC ;; My macbook
        :g "M-1" "|"
        :g "M-2" "@"
        :g "M-3" "#"
@@ -104,12 +102,6 @@
 (setq company-minimum-prefix-length 1
       company-idle-delay 0.0) ;; default is 0.2
 
-;; Create a new derived mode (vuejs-mode) from web-mode to hook for lsp
-(define-derived-mode vuejs-mode web-mode "Vuejs"
-  "Major mode for editing Web & Vuejs templates.\\{web-vue-map}"
-  (setq web-mode-script-padding 2
-        web-mode-style-padding 2
-        web-mode-block-padding 2))
-
-(add-to-list 'auto-mode-alist '("\\.vue\\'" . vuejs-mode))
-(add-hook! 'vuejs-mode-hook #'lsp!)
+;; Custom modules and modes
+(load! "modules/xml")
+(load! "modules/vuejs-mode")
