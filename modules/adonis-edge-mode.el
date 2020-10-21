@@ -11,7 +11,7 @@
   (setq web-mode-script-padding 2
         web-mode-style-padding 2
         web-mode-block-padding 2
-        web-mode-engines-alist '((\"blade\"  . \"\\\\.blade\\\\.\"))))
+        web-mode-engines-alist '((\"blade\"  . \"\\\\.edge\\\\.\"))))
 
 ;; Set as default mode for vuejs files
 (add-to-list 'auto-mode-alist '("\\.edge\\'" . adonis-edge-mode))
