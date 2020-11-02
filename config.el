@@ -111,3 +111,6 @@
 
 ;; Flymake with Haml
 (add-hook! 'haml-mode-hook 'flymake-haml-load)
+
+;; Disable lsp formating with typescript-tsx
+(setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
