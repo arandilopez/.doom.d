@@ -108,3 +108,6 @@
 (load! "modules/xml")
 (load! "modules/vuejs-mode")
 (load! "modules/adonis-edge-mode")
+
+;; Flymake with Haml
+(add-hook! 'haml-mode-hook 'flymake-haml-load)

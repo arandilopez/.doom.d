@@ -53,4 +53,5 @@
 (package! atom-one-dark-theme)
 (package! wakatime-mode)
 (package! haml-mode)
+(package! flymake-haml)
 (package! org-bullets)
