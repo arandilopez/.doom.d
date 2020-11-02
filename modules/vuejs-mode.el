@@ -1,9 +1,7 @@
 ;;; vuejs-mode.el --- Web mode derived mode for Vuejs files  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2020  Arandi Lopez
-
+;; Copyright (C) 2020 Arandi Lopez
 ;; Author: Arandi Lopez <arandilopez.93@gmail.com>
-
 
 ;; A new derived mode (vuejs-mode) from web-mode to hook for lsp
 (define-derived-mode vuejs-mode web-mode "Vuejs"
@@ -15,6 +13,10 @@
 ;; Set as default mode for vuejs files
 (add-to-list 'auto-mode-alist '("\\.vue\\'" . vuejs-mode))
 
-;; Enable LSP fue vuejs files
+;; Enable LSP
 (when (featurep! :tools lsp)
   (add-hook! 'vuejs-mode-hook #'lsp!))
+
+;; Enable formating
+(when (featurep! :editor format)
+  (setq-hook! 'vuejs-mode-hook +format-with 'prettier))
