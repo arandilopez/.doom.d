@@ -40,7 +40,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type 'relative)
 
 (setq projectile-project-search-path '("~/Code"))
 
@@ -67,7 +67,7 @@
 ;; Magit
 (setq git-commit-summary-max-length 80)
 
-;; I don't remember where I readed it but this fixes identations guides when using emacsclient
+;; I don't remember where I read it, but this fixes identations guides on emacsclient
 (after! highlight-indent-guides
   (highlight-indent-guides-auto-set-faces))
 
@@ -75,12 +75,12 @@
 (setq wakatime-cli-path "$(which wakatime)")
 (global-wakatime-mode)
 
-;; Keymaps
+;; Some custom keymaps
 (map! :leader
       :desc "Find file in dotfiles" "f t" #'find-in-dotfiles)
 
 ;; OS X Mapping
-(map! (:when IS-MAC ;; My macbook
+(map! (:when IS-MAC ;; My macbook with spanish keyboard
        :g "M-1" "|"
        :g "M-2" "@"
        :g "M-3" "#"
@@ -113,4 +113,8 @@
 (add-hook! 'haml-mode-hook 'flymake-haml-load)
 
 ;; Disable lsp formating with typescript-tsx
-(setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
+;; (setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
+
+;; Disable xml formating, I have a custom function for that
+(setq-hook! 'nxml-mode-hook +format-with :none)
+(setq-hook! 'xml-mode-hook +format-with :none)

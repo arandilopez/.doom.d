@@ -7,7 +7,7 @@
 
 ;; A new derived mode (adonis-edge-mode) from web-mode
 (define-derived-mode adonis-edge-mode web-mode "Edge"
-  "Major mode for editing Adonis' Edge templates.\\{web-edge-map}"
+  "Major mode for editing Adonis' Edge templates."
   (setq web-mode-script-padding 2
         web-mode-style-padding 2
         web-mode-block-padding 2
