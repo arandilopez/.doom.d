@@ -108,6 +108,7 @@
 ;; Custom modules and modes
 (load! "modules/xml")
 (load! "modules/vuejs-mode")
+(load! "modules/liquid-mode")
 (load! "modules/adonis-edge-mode")
 
 ;; Flymake with Haml
