@@ -110,6 +110,7 @@
 (load! "modules/vuejs-mode")
 (load! "modules/liquid-mode")
 (load! "modules/adonis-edge-mode")
+(load! "modules/prisma-mode")
 
 ;; Flymake with Haml
 (add-hook! 'haml-mode-hook 'flymake-haml-load)

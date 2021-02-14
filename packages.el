@@ -55,3 +55,4 @@
 (package! haml-mode)
 (package! flymake-haml)
 (package! org-bullets)
+(package! graphql-mode)
