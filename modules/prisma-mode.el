@@ -19,9 +19,9 @@
 
 (setq prisma-font-lock-keywords
       (let* (
-             ;; We match `model Album {', but hilight only the word `model'.
+             ;; We match `model Album {', but highlight only the word `model'.
              ;; Same rules for `enum`, `datasource` and `type'.
-             (x-keywords-regexp "^\s*\\(model\\|enum\\|datasource\\|generator\\|type\\)\s+[a-zA-Z0-9_-]+\s*{")
+             (x-keywords-regexp "^\s*\\(model\\|enum\\|datasource\\|generator\\|type\\)\s+\\([a-zA-Z0-9_-]+\\)\s*{")
              ;; Matches the column name and type, highlighting the type.
              (x-scalar-types-regexp "^\s+[a-zA-Z0-9_-]+\s+\\(Int\\|String\\|Boolean\\|DateTime\\|Float\\|Decimal\\|Json\\|[a-zA-Z0-9_-]+\\)")
              ;; A field attribute, such as `@id' or `@map', comes after the column type.
@@ -34,7 +34,7 @@
              ;; Properties in an attribute, e.g. `fields: [MediaTypeId]'.
              (x-properties-regexp "[a-zA-Z_-]+:")
              ;; An attribute function, given as a parameter between parentheses. E.g. `autoincrement()'
-             (x-attribute-functions-regexp "[(]\s*\\(autoincrement\\|cuid\\|uuid\\|now\\|dbgenerated\\|env\\)\(\)\s*[)]")
+             (x-attribute-functions-regexp "\\(autoincrement\\|cuid\\|uuid\\|now\\|dbgenerated\\|env\\)\(\.*\)")
              ;; Constants
              (x-constants-regexp "\\(true\\|false\\|null\\)")
              )
@@ -44,7 +44,7 @@
           (,x-field-attributes-regexp . font-lock-preprocessor-face)
           (,x-attribute-functions-regexp . (1 font-lock-function-name-face))
           (,x-native-types-regexp . font-lock-preprocessor-face)
-          (,x-keywords-regexp . (1 font-lock-keyword-face))
+          (,x-keywords-regexp (1 font-lock-keyword-face) (2 font-lock-type-face))
           (,x-properties-regexp . font-lock-variable-name-face)
           (,x-scalar-types-regexp . (1 font-lock-type-face))
           (,x-constants-regexp . font-lock-constant-face)
