@@ -56,3 +56,5 @@
 (package! flymake-haml)
 (package! org-bullets)
 (package! graphql-mode)
+(package! prisma-mode
+ :recipe (:host github :repo "arandilopez/emacs-prisma-mode" :branch "improve-prisma-mode"))
