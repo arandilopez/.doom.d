@@ -80,15 +80,17 @@
 (map! :leader
       :desc "Find file in dotfiles" "f t" #'find-in-dotfiles)
 
-;; OS X Mapping
-(map! (:when IS-MAC ;; My macbook with spanish keyboard
-       :g "M-1" "|"
-       :g "M-2" "@"
-       :g "M-3" "#"
-       :g "M-º" "\\"
-       :g "M-ç" "}"
-       :g "M-+" "]"
-       :g "M-ñ" "~"))
+;; OS X Settings
+(when IS-MAC
+  (setq ns-use-native-fullscreen t)
+  (map! ;; My macbook with spanish keyboard
+   :g "M-1" "|"
+   :g "M-2" "@"
+   :g "M-3" "#"
+   :g "M-º" "\\"
+   :g "M-ç" "}"
+   :g "M-+" "]"
+   :g "M-ñ" "~"))
 
 ;; LSP mode settings
 (setq lsp-auto-configure t)
@@ -107,11 +109,8 @@
 
 ;; Custom modules and modes
 (load! "modules/xml")
-(load! "modules/vuejs-mode")
 (load! "modules/liquid-mode")
 (load! "modules/adonis-edge-mode")
-
-(add-hook! 'prisma-mode-hook #'lsp!)
 
 ;; Flymake with Haml
 (add-hook! 'haml-mode-hook 'flymake-haml-load)

@@ -152,6 +152,7 @@
        ;;perl              ; write code no one else can comprehend
        (php +lsp)          ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
+       prisma              ; Custom prisma support
        ;;purescript        ; javascript, but functional
        (python +lsp +pyright) ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
@@ -166,6 +167,7 @@
        ;;solidity          ; do you need a blockchain? No.
        ;; (swift +lsp)             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
+       vuejs               ; Vuejs support
        (web +lsp)                 ; the tubes
        yaml                ; YAML support
 
