@@ -44,7 +44,7 @@
         +defaults)       ; default popup rules
        ;; (pretty-code)  ; replace bits of code with pretty symbols
        ;; tabs              ; an tab bar for Emacs
-       treemacs          ; a project drawer, like neotree but cooler
+       (treemacs +lsp)          ; a project drawer, like neotree but cooler
        ;;unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
@@ -67,6 +67,7 @@
        word-wrap         ; soft wrapping with language-aware indent
 
        :emacs
+       undo
        dired             ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
        ibuffer           ; interactive buffer management
@@ -89,7 +90,7 @@
        ;;direnv
        (docker +lsp)
        editorconfig      ; let someone else argue about tabs vs spaces
-       ;;ein               ; tame Jupyter notebooks with emacs
+       ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
        (lookup           ; helps you navigate your code and documentation
@@ -145,7 +146,7 @@
        (org                ; organize your plain life in plain text
         +dragndrop         ; drag & drop files/images into org buffers
         ;;+hugo            ; use Emacs for hugo blogging
-        ;;+jupyter         ; ipython/jupyter support for babel
+        +jupyter         ; ipython/jupyter support for babel
         +pandoc          ; export-with-pandoc support
         ;; +pomodoro        ; be fruitful with the tomato technique
         +present)          ; using org-mode for presentations
