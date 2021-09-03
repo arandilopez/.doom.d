@@ -81,9 +81,10 @@
       :desc "Find file in dotfiles" "f t" #'find-in-dotfiles)
 
 ;; OS X Settings
+;; My macbook with spanish keyboard
 (when IS-MAC
   (setq ns-use-native-fullscreen t)
-  (map! ;; My macbook with spanish keyboard
+  (map!
    :g "M-1" "|"
    :g "M-2" "@"
    :g "M-3" "#"
@@ -100,9 +101,11 @@
 (setq lsp-enable-links nil)
 (setq lsp-enable-symbol-highlighting nil)
 (setq lsp-restart 'auto-restart)
+
 ;; GC and emacs settings for lsp performance
 (setq gc-cons-threshold (* 1024 1024 100)) ;; 100mb
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
+
 ;; Company settings suggested by lsp-mode
 (setq company-minimum-prefix-length 1
       company-idle-delay 0.0) ;; default is 0.2
