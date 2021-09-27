@@ -120,6 +120,9 @@
 
 ;; Disable lsp formating with typescript-tsx
 (setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
+(after! eglot
+  :config
+  (set-eglot-client! 'typescript-tsx-mode '("typescript-language-server" "--stdio")))
 
 ;; Disable xml formating, I have a custom function for that
 (setq-hook! 'nxml-mode-hook +format-with :none)
