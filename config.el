@@ -99,7 +99,7 @@
 (setq lsp-log-io nil)
 (setq lsp-enable-folding nil)
 (setq lsp-enable-links nil)
-(setq lsp-enable-symbol-highlighting nil)
+;; (setq lsp-enable-symbol-highlighting nil)
 (setq lsp-restart 'auto-restart)
 
 ;; GC and emacs settings for lsp performance
@@ -111,9 +111,9 @@
       company-idle-delay 0.0) ;; default is 0.2
 
 ;; Custom modules and modes
-(load! "modules/xml")
-(load! "modules/liquid-mode")
-(load! "modules/adonis-edge-mode")
+;; (load! "modules/xml")
+;; (load! "modules/liquid-mode")
+;; (load! "modules/adonis-edge-mode")
 
 ;; Flymake with Haml
 (add-hook! 'haml-mode-hook 'flymake-haml-load)
