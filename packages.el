@@ -56,3 +56,4 @@
 (package! org-bullets)
 (package! graphql-mode)
 (package! feature-mode)
+(package! bazel)

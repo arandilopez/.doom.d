@@ -99,7 +99,7 @@
 (setq lsp-log-io nil)
 (setq lsp-enable-folding nil)
 (setq lsp-enable-links nil)
-;; (setq lsp-enable-symbol-highlighting nil)
+(setq lsp-enable-symbol-highlighting nil)
 (setq lsp-restart 'auto-restart)
 
 ;; GC and emacs settings for lsp performance
