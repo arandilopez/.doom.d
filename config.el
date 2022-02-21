@@ -127,3 +127,18 @@
 ;; Disable xml formating, I have a custom function for that
 (setq-hook! 'nxml-mode-hook +format-with :none)
 (setq-hook! 'xml-mode-hook +format-with :none)
+
+(use-package blamer
+  :defer 20
+  :custom
+  (blamer-idle-time 0.3)
+  (blamer-min-offset 80)
+  :custom-face
+  (blamer-face ((t :foreground "#5C6370"
+                    :background nil
+                    :height 140
+                    :italic t)))
+  :config
+  (global-blamer-mode 1))
+
+(global-whitespace-mode t)

@@ -57,3 +57,5 @@
 (package! graphql-mode)
 (package! feature-mode)
 (package! bazel)
+(package! atom-one-dark-theme)
+(package! blamer)
