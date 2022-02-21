@@ -29,7 +29,7 @@
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
-       (emoji +unicode +github)  ; :smile:
+       ;; (emoji +unicode +github)  ; :smile:
        ;; fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        hydra
@@ -165,7 +165,7 @@
        ;;scala             ; java, but good
        ;;scheme            ; a fully conniving family of lisps
        sh                  ; she sells {ba,z,fi}sh shells on the C xor
-       ;;solidity          ; do you need a blockchain? No.
+       solidity          ; do you need a blockchain? No.
        ;; (:if IS-MAC
        ;;  (swift +lsp))      ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
